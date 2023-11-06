@@ -1,0 +1,1 @@
+./docs/pages/deepsleep-manager_halSpec.md
