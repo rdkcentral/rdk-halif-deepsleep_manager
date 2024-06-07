@@ -163,7 +163,8 @@ typedef struct _DeepSleepMgr_WakeupKeyCode_Param_t
  * @retval    DEEPSLEEPMGR_SUCCESS             - Success
  * @retval    DEEPSLEEPMGR_ALREADY_INITIALIZED - Module is already initialised
  * @retval    DEEPSLEEPMGR_INIT_FAILURE        - Module has failed to initialized
- * 
+ *
+ *@post PLAT_DS_TERM() must be called to release resources.
  */
 DeepSleep_Return_Status_t PLAT_DS_INIT(void);
 
