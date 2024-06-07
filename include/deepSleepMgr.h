@@ -163,7 +163,8 @@ typedef struct _DeepSleepMgr_WakeupKeyCode_Param_t
  * @retval    DEEPSLEEPMGR_SUCCESS             - Success
  * @retval    DEEPSLEEPMGR_ALREADY_INITIALIZED - Module is already initialised
  * @retval    DEEPSLEEPMGR_INIT_FAILURE        - Module has failed to initialized
- * 
+ *
+ *@post PLAT_DS_TERM() must be called to release resources.
  */
 DeepSleep_Return_Status_t PLAT_DS_INIT(void);
 
@@ -171,7 +172,7 @@ DeepSleep_Return_Status_t PLAT_DS_INIT(void);
  * @brief Sets the CPE's Power State to Deep Sleep
  *
  *
- * @param [in] deep_sleep_timeout   - The deep sleep wakeup timeout. Min value 0
+ * @param [in] deep_sleep_timeout   - The deep sleep wakeup timeout. Min value 0. Max 604800 (One Week)
  * @param [out] isGPIOWakeup        - Wakeup reason. TRUE for user related wake up, false for not
  * @param [in] networkStandby       - Network standby mode
  *                                    true to enable wake up from the same connected network
@@ -184,6 +185,7 @@ DeepSleep_Return_Status_t PLAT_DS_INIT(void);
  * @retval    DEEPSLEEP_SET_FAILURE            - Failed to set Deep Sleep
  *
  * @note If deep_sleep_timeout is set 0, external intervention to wake up is required. @see DeepSleep_WakeupReason_t
+ * @note When waking from deepsleep, it should be done as fast as possible within a few seconds, based on device specification document
  *
  * @pre      PLAT_DS_INIT() must be called before calling this API
  * @post    PLAT_DS_DeepSleepWakeup() must be called after calling this API

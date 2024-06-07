@@ -1,12 +1,5 @@
 # Deep Sleep Manager HAL Documentation
 
-## Version History
-
-| Date[DD/MM/YY] | Comment | Version |
-| ---- | ------- | ------- |
-| 01/10/23 | Second Release  | 1.0.1 |
-| 05/06/23  | First Release | 1.0.0 |
-
 - [Acronyms, Terms and Abbreviations](#acronyms-terms-and-abbreviations)
 - [Description](#description)
 - [Component Runtime Execution Requirements](#component-runtime-execution-requirements)
@@ -29,7 +22,7 @@
   - [Platform or Product Customization](#platform-or-product-customization)
 - [Interface API Documentation](#interface-api-documentation)
   - [Theory of operation and key concepts](#theory-of-operation-and-key-concepts)
-  - [Diagrams](#diagrams)
+  - [Sequence Diagram](#sequence-diagram)
 
 ## Acronyms, Terms and Abbreviations
 
@@ -59,6 +52,7 @@ style y fill:#99CCFF,stroke:#333,stroke-width:0.3px,align:left
 style z fill:#fcc,stroke:#333,stroke-width:0.3px,align:left
 style x fill:#9f9,stroke:#333,stroke-width:0.3px,align:left
  ```
+
 The Deep Sleep Manager `HAL` provides a set of `APIs` to initialize, set the deep sleep state and wake-up from deep sleep state.
 
 Deep sleep is a power saving mode which turns off `STB` subsystems such as A/V, `HDMI`, front panels, `HDD` etc.
@@ -204,5 +198,3 @@ The `caller` is expected to have complete control over the life cycle of the `HA
     Caller ->>HAL:PLAT_DS_TERM()
     HAL-->>Caller:return
  ```
-
-<br/>
