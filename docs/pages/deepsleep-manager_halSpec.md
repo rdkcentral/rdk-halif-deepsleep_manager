@@ -51,7 +51,7 @@ x[Deep Sleep Manager HAL]<-->z[SOC Drivers];
 style y fill:#99CCFF,stroke:#333,stroke-width:0.3px,align:left
 style z fill:#fcc,stroke:#333,stroke-width:0.3px,align:left
 style x fill:#9f9,stroke:#333,stroke-width:0.3px,align:left
- ```
+```
 
 The Deep Sleep Manager `HAL` provides a set of `APIs` to initialize, set the deep sleep state and wake-up from deep sleep state.
 
@@ -197,4 +197,4 @@ The `caller` is expected to have complete control over the life cycle of the `HA
     HAL-->>Caller:return
     Caller ->>HAL:PLAT_DS_TERM()
     HAL-->>Caller:return
- ```
+```
