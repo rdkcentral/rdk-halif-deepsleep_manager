@@ -108,6 +108,7 @@ extern "C"
      DEEPSLEEPMGR_SET_FAILURE,         /*!< Failed to enter Deep Sleep */
      DEEPSLEEPMGR_WAKEUP_FAILURE,      /*!< Failed to perform wake up actions */
      DEEPSLEEPMGR_TERM_FAILURE,        /*!< Module has failed to terminate */
+     DEEPSLEEPMGR_POST_RESUME_ERROR    /*!< Failed to perform Post resume operation */
      DEEPSLEEPMGR_MAX                  /*!< Out of range - required to be the last item of the enum */
  } DeepSleep_Return_Status_t;
 
@@ -182,8 +183,9 @@ DeepSleep_Return_Status_t PLAT_DS_INIT(void);
  * @retval    DEEPSLEEPMGR_SUCCESS             - Success
  * @retval    DEEPSLEEPMGR_NOT_INITIALIZED     - Module is not initialised
  * @retval    DEEPSLEEPMGR_INVALID_ARGUMENT    - Parameter passed to this function is invalid
- * @retval    DEEPSLEEP_SET_FAILURE            - Failed to set Deep Sleep
- * @retval    DEEPSLEEPMGR_WAKEUP_FAILURE      - Failed to perform resume operation
+ * @retval    DEEPSLEEPMGR_SET_FAILURE         - Failed to set Deep Sleep
+ * @retval    DEEPSLEEPMGR_POST_RESUME_ERROR   - Failed to perform post resume operation
+ *
  *
  * @note If deep_sleep_timeout is set 0, external intervention to wake up is required. @see DeepSleep_WakeupReason_t
  * @note When waking from deepsleep, it should be done as fast as possible within a few seconds, based on device specification document
