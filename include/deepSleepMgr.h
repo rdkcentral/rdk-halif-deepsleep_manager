@@ -106,7 +106,7 @@ extern "C"
      DEEPSLEEPMGR_NOT_INITIALIZED,     /*!< Module is not initialized */
      DEEPSLEEPMGR_INIT_FAILURE,        /*!< Initialization has failed */
      DEEPSLEEPMGR_SET_FAILURE,         /*!< Failed to enter Deep Sleep */
-     DEEPSLEEPMGR_WAKEUP_FAILURE,      /*!< Failed to perform wake up actions post reaume */
+     DEEPSLEEPMGR_WAKEUP_FAILURE,      /*!< Failed to perform wake up actions post resume */
      DEEPSLEEPMGR_TERM_FAILURE,        /*!< Module has failed to terminate */
      DEEPSLEEPMGR_MAX                  /*!< Out of range - required to be the last item of the enum */
  } DeepSleep_Return_Status_t;
