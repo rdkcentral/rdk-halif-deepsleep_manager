@@ -108,7 +108,7 @@ extern "C"
      DEEPSLEEPMGR_SET_FAILURE,         /*!< Failed to enter Deep Sleep */
      DEEPSLEEPMGR_WAKEUP_FAILURE,      /*!< Failed to perform wake up actions */
      DEEPSLEEPMGR_TERM_FAILURE,        /*!< Module has failed to terminate */
-     DEEPSLEEPMGR_POST_RESUME_ERROR    /*!< Failed to perform Post resume operation */
+     DEEPSLEEPMGR_POST_RESUME_ERROR,   /*!< Failed to perform Post resume operation */
      DEEPSLEEPMGR_MAX                  /*!< Out of range - required to be the last item of the enum */
  } DeepSleep_Return_Status_t;
 
