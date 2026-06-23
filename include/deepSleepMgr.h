@@ -142,6 +142,10 @@ typedef enum _DeepSleep_WakeupReason_t
    DEEPSLEEP_WAKEUPREASON_PRESENCE,         /*!< Deepsleep Wakeup Reason is Motion Detection event */
    DEEPSLEEP_WAKEUPREASON_VOICE,            /*!< Deepsleep Wakeup Reason is User Voice event */
    DEEPSLEEP_WAKEUPREASON_UNKNOWN,          /*!< Deepsleep Wakeup Reason is Unknown Reason event */
+
+   /* Infosys-LGI extensions*/
+   DEEPSLEEP_WAKEUPREASON_WIFI_LOST,        /*!< Deepsleep Wakeup Reason is WiFi connection is lost */
+
    DEEPSLEEP_WAKEUPREASON_MAX               /*!< Out of range - required to be the last item of the enum */
 }DeepSleep_WakeupReason_t;
 
